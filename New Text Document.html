@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+    return true;
+}
+function validateNumber() {
+    var x = document.forms["myForm"]["fNumber"].value;
+    String m=document.forms["myForm"]["fNumber"].value;
+    if (Number.isInteger(x) && m.length<=11) {
+        alert("Name must be filled out");
+        console.log(Is a Number));
+        return true;
+    }
+    return false;
+}
+</script>
+</head>
+<body>
+
+<form name="myForm" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
+Name: <input type="text" name="fname">
+<input type="submit" value="Submit">
+</form>
+
+<br/>
+
+<form name="myFormNumber" action="/action_page.php"
+onsubmit="return validateNumber()" method="post">
+Number: <input type="text" name="fNumber">
+<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
